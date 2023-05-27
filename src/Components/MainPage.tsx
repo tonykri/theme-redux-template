@@ -6,6 +6,7 @@ import { increment, decrement, incrementByAmount } from '../Redux/Features/count
 import { changeName } from '@/Redux/Features/nameSlice';
 
 import ThemeBtn from "./ThemeBtn";
+import Link from 'next/link';
 
 export default function MainPage() {
     const count = useSelector((state: RootState) => state.counter.value);
@@ -30,6 +31,7 @@ export default function MainPage() {
                     onClick={() => dispatch(changeName('Tony'))}>changeName</button>
                 <span className='bg-green-400'>{name}</span>
             </div>
+            <Link href={'/test'}>test</Link>
         </div>
     )
 }
